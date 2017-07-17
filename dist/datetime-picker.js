@@ -154,6 +154,9 @@ angular.module('ui.bootstrap.datetimepicker', ['ui.bootstrap.dateparser', 'ui.bo
 
                 datepickerEl.attr('datepicker-options', 'datepickerOptions');
 
+                // Added so you cna change the template for the date picker
+                datepickerEl.attr(cameltoDash('templateUrl'), $scope.datepickerOptions.templateUrl);
+
                 // set datepickerMode to day by default as need to create watch
                 // else disabled cannot pass in mode
                 if (!angular.isDefined($scope.datepickerOptions.datepickerMode)) {
